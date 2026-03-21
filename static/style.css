@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #59627a;
+    color: #ffffff;
+}
+
+/* Center containers */
+.container {
+    width: 350px;
+    margin: 80px auto;
+    padding: 30px;
+    background: #1e293b;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.container a {
+    color: #0562f8;
+}
+
+/* Headings */
+h2, h3 {
+    text-align: center;
+}
+
+.logo {
+    width: 300px;
+    margin-left: 41%;
+    align-items: center;
+}
+
+/* Inputs */
+input {
+    width: 95%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    padding: 10px;
+    background: #3b82f6;
+    border: none;
+    color: white;
+    
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2563eb;
+}
+
+/* Dashboard layout */
+.results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Movie cards */
+.card {
+    background: #1e293b;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.card p {
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.alert {
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    width: 99%;
+}
+
+/* top bar */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+}
+
+/* logout button */
+.logout-btn {
+    background: #ff4d4d;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.logout-btn:hover {
+    background: #cc0000;
+}
+
+/* guest message banner */
+.guest-banner {
+    margin-left: 30px;
+}
+

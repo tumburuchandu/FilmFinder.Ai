@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body> 
+<img src="/static/logo.png" alt="FilmFinder AI" class="logo">
+<div class="top-bar">
+    <h2>Welcome {{ user }}</h2>
+
+    {% if user != "Guest" %}
+        <a href="/logout" class="logout-btn">Logout</a>
+    {% endif %}
+</div>
+
+{% if user == "Guest" %}
+<div class="guest-banner">
+    <p>Please login to get personalized recommendations and save your history.</p>
+</div>
+{% endif %}
+
+<div class="container">
+    <h3>Search Movies</h3>
+
+    <form method="POST" action="/recommend">
+        <input type="text" name="query" placeholder="Search by movie, actor, or description">
+        <button type="submit">Recommend</button>
+    </form>
+</div>
+
+<h3 style="text-align:center;">Recommendations</h3>
+
+{% if movies %}
+<div class="results">
+    {% for movie in movies %}
+        <div class="card">
+            <img src="{{ movie.poster }}" loading="lazy" alt="{{ movie.title }}">
+            <p>{{ movie.title }}</p>
+        </div>
+    {% endfor %}
+</div>
+{% endif %}
+
+</body>
+</html>

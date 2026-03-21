@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<img src="/static/logo.png" alt="FilmFinder AI" class="logo">
+<div class="container">
+    <h2>Create Account</h2>
+
+    <form method="POST" action="/signup">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit">Signup</button>
+    </form>
+
+    <p>Already have an account? <a href="/">Login</a></p>
+    <a href="/skip">Skip and explore</a>
+</div>
+
+</body>
+</html>
